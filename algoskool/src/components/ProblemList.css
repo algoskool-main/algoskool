@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.problem-list-container {
+  background-color: #0a1519; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width : 65%;
+  padding-top: 1rem;
+}
+
+.problem-list-title {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family: 'Lexend';
+  border-bottom: 0.05rem solid rgba(48,60,63,255);
+  text-align: left center;
+  margin-bottom: 20px;
+  padding-top: 0px;
+}
+
+.problem-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Lexend';
+}
+
+.problem-table th, .problem-table td {
+  padding: 12px;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Lexend';
+  
+}
+
+.problem-table th {
+  background-color: #333;
+}
+
+.problem-table tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+.problem-table tr:hover {
+  background-color: #444;
+  border-collapse: collapse;
+  
+}
+
+#problem-topics {
+  color : #969a9d; 
+}
+
+.difficulty {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  border-collapse: collapse;
+}
+
+.difficulty.easy {
+  color: #28a745; 
+}
+
+.difficulty.medium {
+  color: #f5a232; 
+}
+
+.difficulty.hard {
+  color: #dc3545; 
+}
+
+.vertical-line{
+  border-right: 0.05rem solid rgba(48,60,63,255);
+  border-left: 0.05rem solid rgba(48,60,63,255);
+  height: 100%;
+}
