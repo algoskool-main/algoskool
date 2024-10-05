@@ -1,0 +1,58 @@
+/* General reset for body */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  background-color: white 5; /* Light background for contrast */
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Global container */
+.App {
+  text-align: center;
+  min-height: 100vh; /* Makes sure the app fills the entire viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Main section container */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Link styling reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Universal button style */
+button {
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #713e98; /* Slight darkening on hover */
+}
+
+/* Styling for responsive font sizes */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Footer styling (if you plan to add one) */
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}

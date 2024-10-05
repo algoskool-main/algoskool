@@ -1,0 +1,59 @@
+
+
+.features {
+    position:relative;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align items to the start */
+    padding: 100px 50%; /* Add some padding */
+    background-color:white; /* Background color for the features section */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    overflow: hidden; /* Prevent overflow during animation */
+  
+  }
+  .background-circle {
+    position: absolute;
+    top: 60%; /* Adjust position to center the sphere */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust width for your desired sphere size */
+    height: 200px; /* Adjust height for the semi-sphere effect */
+    background: linear-gradient(
+      to right, /* Left to right gradient */
+      rgba(209, 189, 156, 1),    /* Starting color (left side) */
+      rgba(61, 44, 71, 1),       /* Second color */
+      rgba(29, 86, 122, 1),      /* Third color */
+      rgba(41, 101, 128, 1),     /* Fourth color */
+      rgba(157, 175, 153, 1),    /* Fifth color */
+      rgba(177, 183, 154, 1)     /* Ending color (right side) */
+    );
+     border-radius: 300% 300% 0 0;
+    z-index: 0; /* Ensure the sphere is behind the text */
+     /* Optional: adds smoothness to the gradient */
+  }
+  
+  .feature-item {
+    text-align: center; /* Center align text */
+    width: 180px; /* Set a fixed width for each item */
+    height: 45px; /* Set a fixed height for each item */
+    margin:0 30px; /* Add some margin between items */
+    font-size: 1.5rem; /* Title font size */
+    color:darkslateblue; /* Title color */
+    padding: 20px; /* Add padding around each item for better spacing */
+    border:1px solid #4c1e78; /* Optional border for styling */
+    border-radius: 20px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    background-color: rgba(243,237,247,255); /* Very light violet */
+    transform: scale (1.1);
+    z-index: 2;
+   
+    
+  }
+  
+  
+  .feature-item:hover {
+    border: 1px solid #4c1e78; /* Add a border on hover */
+  }
+  .ai-enabled {
+    transform: translateY(-100px); /* Move the title to the left visually */
+  }

@@ -1,0 +1,60 @@
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .logo {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: white; /* Text color */
+    background-image: linear-gradient(to right, #4c1e78, #9b4baf); /* Gradient colors */
+    padding: 10px 35px; /* Add padding for box effect */
+    border-radius: 100px; /* Rounded corners for box effect */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); Optional shadow for depth */
+    border: 2px solid transparent; /* Create a border for the box shape */
+    text-align: center; /* Center the text */
+    transition: background 0.3s ease;
+   
+  }
+  .logo:hover{
+    background: linear-gradient(to right, #9b4baf, #4c1e78);
+  }
+  
+  .nav-links {
+    font-size:1.5rem;
+    font-weight: 550;
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    color:black;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    
+
+  }
+  
+  .sign-up-btn {
+  padding: 15px 35px; /* Adjust padding to match the image */
+  font-size: 1.1rem; /* Adjust font size to match */
+  font-weight: bold;
+  color: white; /* Text color */
+  background: linear-gradient(to right, #4c1e78, #9b4baf); /* Darker gradient colors */
+  border: none;
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer;
+  position: relative; /* For positioning the arrow */
+  overflow: hidden; /* Ensure the arrow stays within the button */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: background 0.3s ease;
+  }
+  .sign-up-btn:hover{
+    background: linear-gradient(to right, #9b4baf, #4c1e78);
+  }
