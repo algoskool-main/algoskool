@@ -1,4 +1,3 @@
-// TrendingSection.js
 import React from "react";
 import './TrendingSection.css';
 
@@ -10,17 +9,17 @@ const TrendingSection = () => {
   <path d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925"/>
 </svg></h3>
       <div className="trending-item">
-        <h4>Array Questions</h4>
+        <h4>Array <br></br>Questions</h4>
         <p>Solve array questions to enhance your DSA skills!</p>
         <button>Practice</button>
       </div>
       <div className="trending-item">
-        <h4>Strings Questions</h4>
+        <h4>Strings <br></br>Questions</h4>
         <p>Improve your string manipulation skills!</p>
         <button>Practice</button>
       </div>
       <div className="trending-item">
-        <h4>Binary Tree Questions</h4>
+        <h4>Binary Tree <br></br>Questions</h4>
         <p>Master binary trees and ace your interviews!</p>
         <button>Practice</button>
       </div>

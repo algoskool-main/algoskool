@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #0a1519;
-    color: #fff;
+    color: #f7f7f7;
     width : 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -16,6 +16,7 @@
     padding-left: 4rem;
     cursor: pointer;
 }
+
 .header-logo h1 {
     background-color: #2f1349;
     font-family: 'Lexend';
@@ -31,7 +32,6 @@
 }
 
 .header-logo :hover {
-    
     transform: scale(1.03);
 }
 
@@ -76,5 +76,7 @@
 }
 
 .horizontal-line{
+    width: 100%;
     border-bottom: 0.05rem solid rgba(48,60,63,255);
+    margin: 0;
 }

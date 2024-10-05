@@ -34,6 +34,7 @@ const Sidebar = () => {
               <p>Our various<br></br> features are premium.<br></br>Subscribe now to avail <br></br>the premium features.</p>
               <button className="subscribe-button">Subscribe</button>
             </div>
+
           </div>
     </div>
 );
