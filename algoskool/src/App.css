@@ -1,39 +1,52 @@
-/* General reset for body */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Lexend', sans-serif; /* Apply 'Lexend' font globally */
   box-sizing: border-box;
-  background-color: white 5; /* Light background for contrast */
+  background-color: white; /* Light background for the whole page */
   color: #333;
   overflow-x: hidden;
 }
 
-/* Global container */
 .App {
   text-align: center;
-  min-height: 100vh; /* Makes sure the app fills the entire viewport */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+header {
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-/* Main section container */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
-/* Link styling reset */
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Universal button style */
 button {
   cursor: pointer;
   outline: none;
@@ -41,18 +54,5 @@ button {
 }
 
 button:hover {
-  background-color: #713e98; /* Slight darkening on hover */
-}
-
-/* Styling for responsive font sizes */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-/* Footer styling (if you plan to add one) */
-footer {
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  text-align: center;
+  background-color: #713e98;
 }

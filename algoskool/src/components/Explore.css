@@ -1,0 +1,40 @@
+.explore {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-family: 'Lexend', sans-serif;
+    color: #2c2c54;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #4c4c6d;
+    margin-bottom: 30px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #f3edf7;
+    padding: 40px;
+    margin: 0 10px;
+    border-radius: 20px;
+    width: 150px;
+    font-family: 'Lexend', sans-serif;
+    color: #2c2c54;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+  

@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; /* Adjust width for your desired sphere size */
-    height: 200px; /* Adjust height for the semi-sphere effect */
+    height: 225px; /* Adjust height for the semi-sphere effect */
     background: linear-gradient(
       to right, /* Left to right gradient */
       rgba(209, 189, 156, 1),    /* Starting color (left side) */

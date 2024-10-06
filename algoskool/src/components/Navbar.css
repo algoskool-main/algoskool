@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 
 .navbar {
@@ -14,12 +14,13 @@
     font-weight: bold;
     color: white; /* Text color */
     background-image: linear-gradient(to right, #4c1e78, #9b4baf); /* Gradient colors */
-    padding: 10px 35px; /* Add padding for box effect */
+    padding: 5px 30px; /* Add padding for box effect */
     border-radius: 100px; /* Rounded corners for box effect */
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); Optional shadow for depth */
     border: 2px solid transparent; /* Create a border for the box shape */
     text-align: center; /* Center the text */
     transition: background 0.3s ease;
+    font-family: 'Lexend';
    
   }
   .logo:hover{
@@ -33,6 +34,7 @@
     display: flex;
     gap: 100px;
     color:black;
+    font-family: 'Lexend';
   }
   
   .nav-links li {
@@ -54,6 +56,7 @@
   overflow: hidden; /* Ensure the arrow stays within the button */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   transition: background 0.3s ease;
+  font-family: 'Lexend';
   }
   .sign-up-btn:hover{
     background: linear-gradient(to right, #9b4baf, #4c1e78);
