@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaBell, FaPowerOff } from 'react-icons/fa';
 import './header.css';
 
@@ -11,8 +12,8 @@ const Header = () => {
       </div>
       <nav className="header-nav">
         <ul>
-          <li>Rooms</li>
-          <li>Problems</li>
+          <li><Link to="/rooms">Rooms</Link></li>
+          <li><Link to="/problems">Problems</Link></li>
           <li>Contests</li>
           <li>Explore</li>
         </ul>

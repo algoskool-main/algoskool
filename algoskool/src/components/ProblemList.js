@@ -3,9 +3,9 @@ import './ProblemList.css';
 
 const problemsData = [
   { id: 215, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
-  { id: 216, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
-  { id: 217, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
-  { id: 218, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
+  { id: 216, name: "Longest Valid Parentheses", topic: "Strings", difficulty: "Hard" },
+  { id: 217, name: "Reverse Linked List", topic: "Linked List", difficulty: "Easy" },
+  { id: 218, name: "Binary Tree Inorder Traversal", topic: "Binary Tree", difficulty: "Medium" },
   { id: 219, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
   { id: 220, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
   { id: 221, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },

@@ -1,0 +1,20 @@
+
+.rooms-container {
+    padding: 20px;
+    color: #fff;
+    background-color: #0a1519;
+    width: 100%;
+}
+
+.rooms-container h2 {
+    font-size: 32px;
+    font-family: 'Lexend';
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.rooms-container p {
+    font-size: 18px;
+    color: #aaa;
+    font-family: 'Lexend';
+}

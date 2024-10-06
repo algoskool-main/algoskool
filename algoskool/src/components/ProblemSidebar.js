@@ -1,8 +1,8 @@
 import React from "react";
-import './Sidebar.css';
+import './ProblemSidebar.css';
 
 
-const Sidebar = () => {
+const ProblemSidebar = () => {
   return (
     <div className="sidebar">
       
@@ -42,4 +42,4 @@ const Sidebar = () => {
 
 
 
-export default Sidebar;
+export default ProblemSidebar;

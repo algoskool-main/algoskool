@@ -1,21 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 .app-container{
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  font-family: 'Lexend';
 }
 
 .main-content {
   display: flex;
   flex: 1;
-  padding: 0;
+
 }
+
+.sidebar {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  display: flex;
+  flex: 1;
+}
+
+.problem-list-container {
+  flex: 1;
+  display: flex;
+}
+
+.trending-section {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+}
+  
 
 @media (max-width: 768px) {
   .main-content {
-    flex-direction: column;
+    flex-direction: column; /* Stack sidebar and content vertically */
+    height: auto; /* Allow automatic height on smaller screens */
   }
-  .sidebar, .problem-list-container, .trending-section {
-    width: 100%;
+
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    flex: none; /* Disable flex behavior */
+    border-right: none;
+  }
+
+  .problem-list-container {
+    width: 100%; /* Full width */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .trending-section {
+    width: 100%; /* Full width */
+    flex: none; /* Disable flex behavior */
+    border-left: none;
+    margin-top: 20px; /* Add some margin on top */
   }
 }
