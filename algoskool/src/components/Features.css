@@ -8,7 +8,7 @@
     padding: 100px 50%; /* Add some padding */
     background-color:white; /* Background color for the features section */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
-    overflow: hidden; /* Prevent overflow during animation */
+    background-color: transparent;
   
   }
  
@@ -43,12 +43,12 @@
     height: 45px; /* Set a fixed height for each item */
     margin:0 30px; /* Add some margin between items */
     font-size: 1.5rem; /* Title font size */
-    color:darkslateblue; /* Title color */
+    color:darkslateblue; 
     padding: 20px; /* Add padding around each item for better spacing */
     border:1px solid #4c1e78; /* Optional border for styling */
     border-radius: 20px; /* Rounded corners */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
-    background-color: rgba(243,237,247,255); 
+    background-color:rgba(240,232,246,0.8); 
     z-index: 2;
    
     
@@ -68,43 +68,3 @@
     transform: translateY(-100px); /* Move the title to the left visually */
     transition: transform 0.5s ease-in-out;
   }
-  .color {
-    background: linear-gradient(
-      /* Right-to-left gradient for the top section */
-      to bottom, /* From top to bottom */
-      rgba(143,118,133,0.5),
-      rgba(163,138,147,0.5),
-      rgba(195,181,172,0.5),
-      rgba(230,224,211,0.5),
-      rgba(238,237,227,0.5),
-      rgba(244,245,242,0.5),
-      rgba(245,244,244,0.5),
-      rgba(247,246,247,0.5),
-      rgba(245,244,244,0.5)
-  
-  
-      ),
-      linear-gradient(
-         to bottom right,
-         rgba(61, 44, 71,0.5),
-         rgba(61, 44, 71, 0.3), 
-         rgba(61, 44, 71, 0.3),    /* Starting color (top) */
-         rgba(29, 86, 122, 0.3), 
-         rgba(29, 86, 122, 0.3),
-         rgba(29, 86, 122, 0.3), /* Second color */
-         rgba(41, 101, 128, 0.5), /* Third color */
-         rgba(157, 175, 153, 0.5),/* Fourth color */
-         rgba(177, 183, 154, 0.5),
-         #ede8e0
-      );
-      
-     
-    height: 1135px; /* Height of the color div */
-    width: 100%;    /* Full width */
-    position: absolute; /* Position it absolutely to fill the container */
-    top: 0; /* Align it to the top of the container */
-    left: 0; /* Align it to the left of the container */
-    z-index: -1;
-    margin-top:0px
-  }
-  

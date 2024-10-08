@@ -24,22 +24,24 @@ const Footer = () => {
             Based in <img src={india} alt="India flag" className="india-flag"/> {/* Ensure this image path is correct */}
           </div>
         </div>
-        <div>
+        <div className="arrow-container">
         <a href="/Sign Up" className="arrow">
           Sign Up
         </a>
       </div>
       </div>
 
-      <div className="footer-links">
+     
+      
     <nav>
         <p className="copyright">Copyright © Reserved. 2024.</p>
         <a href="/Rooms" className="link">Rooms</a>
         <a href="/Roadmap" className="link">Roadmap</a>
         <a href="/Explore" className="link">Explore</a>
         <a href="/Team" className="link">Team</a>
+       
     </nav>
-</div>
+
     </footer>
   );
 }

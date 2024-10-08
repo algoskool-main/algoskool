@@ -28,6 +28,7 @@
     transition: background 0.3s ease;
     font-family: 'Lexend';
     margin-left: 10px;
+    margin-bottom:130px;
   }
   .logo:hover{
     background: linear-gradient(to right, #9b4baf, #4c1e78);
@@ -36,6 +37,7 @@
     
     font-size:1.1rem;
     color:black;
+    
   }
   .heart{
     color:rgba(255, 0, 0, 0.973);
@@ -60,35 +62,38 @@
     font-size:1.1rem;
     margin-top:30px;
   }
-  
+  .arrow-container {
+    position: relative; 
+    margin-bottom: 180px;
+    margin-right:130px;
+}
  .arrow {
-    padding: 8px 25px; /* Adjust padding to match the image */
-  font-size: 1.1rem; /* Adjust font size to match */
+    padding: 10px 20px; /* Adjust padding to match the image */
+  font-size: 1rem; /* Adjust font size to match */
   font-weight: bold;
   color: white; /* Text color */
   background: linear-gradient(to right, #4c1e78, #9b4baf); /* Darker gradient colors */
   border: none;
   border-radius: 100px; /* Rounded corners */
   cursor: pointer;
-  position: relative; /* For positioning the arrow */
   overflow: hidden; /* Ensure the arrow stays within the button */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   transition: background 0.3s ease;
   font-family: 'Lexend';
-      
+  display:flex;
+  position:absolute;
+  height: 26px;
+  width:70px;
+
+  
   }
   .arrow:hover{
     background: linear-gradient(to right, #9b4baf, #4c1e78);
   }
   
-  .footer-links {
-    display: flex; /* Flexbox apply */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Align items vertically */
+ 
 
-}
-
-.footer-links nav {
+ nav {
     display: flex; /* Apply Flexbox to nav for horizontal alignment */
     align-items: center;
     color:black;
@@ -99,12 +104,13 @@
     font-family: 'Lexend';
     white-space: nowrap;
     color:black;
-    margin-top:80px;
+    margin-top:90px;
     font-size:1.1rem;
+    margin-bottom:10px;
 
 }
 
-.footer-links .link {
+ .link {
     margin: 0 10px;
     text-decoration: none;
     margin-top:80px;
@@ -117,6 +123,8 @@
     margin-right: 20px 20px;
     margin-left: 20px 20px;
     font-size: 1rem;
+    margin-top:30px;
+
   }
   
   

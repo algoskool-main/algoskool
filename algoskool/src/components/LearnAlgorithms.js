@@ -4,7 +4,6 @@ import imag from './img.jpg';
 const LearnAlgorithms = () => {
   return (
     <div className="learn-together-container">
-    <div className="color"></div>
       <div className="text-content">
         <h1>Learn Algorithms Together</h1>
         <p>
