@@ -12,22 +12,23 @@ const problemsData = [
   { id: 222, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
   { id: 223, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
   { id: 224, name: "Two Sums", topic: "Arrays", difficulty: "Medium" },
+  { id: 218, name: "Binary Tree Inorder Traversal", topic: "Binary Tree", difficulty: "Medium" },
+  { id: 218, name: "Binary Tree Inorder Traversal", topic: "Binary Tree", difficulty: "Medium" },
+  { id: 218, name: "Binary Tree Inorde rTraversal", topic: "Binary Tree", difficulty: "Medium" },
+  { id: 218, name: "Binary Tree Inorder Traversal", topic: "Binary Tree", difficulty: "Medium" },
   
 ];
 
 const ProblemList = () => {
   return (
     <div className="problem-list-container">
-      <div className="vertical-line">
       <h2 className="problem-list-title">Problems</h2>
       <table className="problem-table">
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
+            <th>Id</th>
+            <th>Title</th>
             <th>Topic</th>
             <th>Difficulty</th>
-          </tr>
         </thead>
         <tbody>
           {problemsData.map((problem, index) => (
@@ -42,7 +43,6 @@ const ProblemList = () => {
           ))}
         </tbody>
       </table>
-      </div>
     </div>
   );
 };

@@ -1,24 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaBell, FaPowerOff } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
+  const location = useLocation(); 
+
+  const isProblemsPage = location.pathname === "/problems";
+  const isRoomsPage = location.pathname === "/rooms";
+  
   return (
     <div>
-      <header className="header">
+      <header className={`header ${isProblemsPage ? 'header-problems' : isRoomsPage ? 'header-rooms' : ''}`}>
         <div className="header-logo">
           <h1>algoskool</h1>
         </div>
         <nav className="header-nav">
           <ul>
             <li>
-              <Link className="links" to="/rooms">
+            <Link className={`links ${isRoomsPage ? "active" : ""}`} to="/rooms">
                 Rooms
               </Link>
             </li>
             <li>
-              <Link className="links active" to="/problems">
+            <Link className={`links ${isProblemsPage ? "active" : ""}`} to="/problems">
                 Problems
               </Link>
             </li>
