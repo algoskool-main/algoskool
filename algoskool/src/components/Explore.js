@@ -8,7 +8,7 @@ const Explore = () => {
   return (
     <section className="explore">
       <h2>Explore</h2>
-      <p>We offer a lot of interesting features for algorithm learning.</p>
+      <p class="p">We offer a lot of interesting features for algorithm learning.</p>
       <div className="cards">
         <div className="card">
           <div className="card-content">

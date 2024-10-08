@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-
 import india from './india.jpg'
 const Footer = () => {
   return (
@@ -21,7 +20,7 @@ const Footer = () => {
             more personalized and interactive.
           </p>
           <div className="based-in">
-            Based in <img src={india} alt="India flag" className="india-flag"/> {/* Ensure this image path is correct */}
+            Based in <img src={india} alt="India flag" className="india-flag"/>
           </div>
         </div>
         <div className="arrow-container">

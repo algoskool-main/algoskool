@@ -16,15 +16,15 @@
   
   
   .logo1{
-    font-size: 1.7rem; /* Adjust size as needed */
+    font-size: 1.7rem; 
     font-weight: bold;
-    color: white; /* Text color */
-    background-image: linear-gradient(to right, #4c1e78, #9b4baf); /* Gradient colors */
-    padding: 5px 25px; /* Add padding for box effect */
-    border-radius: 100px; /* Rounded corners for box effect */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); Optional shadow for depth */
-    border: 2px solid transparent; /* Create a border for the box shape */
-    text-align: center; /* Center the text */
+    color: white; 
+    background-image: linear-gradient(to right, #4c1e78, #9b4baf); 
+    padding: 5px 25px; 
+    border-radius: 100px; 
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    border: 2px solid transparent; 
+    text-align: center;
     transition: background 0.3s ease;
     font-family: 'Lexend';
    
@@ -52,16 +52,16 @@
   }
   
   .sign-up-btn {
-  padding: 5px 25px; /* Adjust padding to match the image */
-  font-size: 1.4rem; /* Adjust font size to match */
+  padding: 5px 25px; 
+  font-size: 1.4rem;
   font-weight: bold;
-  color: white; /* Text color */
-  background: linear-gradient(to right, #4c1e78, #9b4baf); /* Darker gradient colors */
+  color: white; 
+  background: linear-gradient(to right, #4c1e78, #9b4baf); 
   border: none;
-  border-radius: 100px; /* Rounded corners */
+  border-radius: 100px; 
   cursor: pointer;
-  position: relative; /* For positioning the arrow */
-  overflow: hidden; /* Ensure the arrow stays within the button */
+  position: relative;  
+  overflow: hidden; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   transition: background 0.3s ease;
   font-family: 'Lexend';
