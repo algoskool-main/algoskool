@@ -5,9 +5,11 @@
     align-items: center;
     height: 50vh;
     background-color: #fff;
+    position:relative;
   }
   
   .hero-section h1 {
+    position:absolute;
     font-size: 100px;
     color:linear-gradient(to right, #1e2c78,darkslateblue);
      margin-bottom: 40px;
@@ -17,6 +19,7 @@
     background-image: linear-gradient(to right,black,darkslateblue); /* Define the gradient colors */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+    z-index:1;
   }
   
   @keyframes fade-in-out {

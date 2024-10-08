@@ -1,17 +1,18 @@
 import React from 'react';
 import './Footer.css';
+
 import india from './india.jpg'
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-      <div className="footer-left">
+  
         <div className="logo">
           <a href="/">algoskool</a>
         </div>
-      </div>
+      
         <div className="footer-middle">
-          <p>
+          <p className="made">
             Made with <span className="heart">❤</span> by UoA
           </p>
           <p className="description">
@@ -23,27 +24,25 @@ const Footer = () => {
             Based in <img src={india} alt="India flag" className="india-flag"/> {/* Ensure this image path is correct */}
           </div>
         </div>
-        <div className="footer-signup">
+        <div>
         <a href="/Sign Up" className="arrow">
           Sign Up
         </a>
       </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>Copyright © Reserved. 2024.</p>
-        <nav className="footer-links">
-          <a href="/Rooms">Rooms</a>
-          <a href="/Roadmap">Roadmap</a>
-          <a href="/Explore">Explore</a>
-          <a href="/Team">Team</a>
-        </nav>
-      </div>
+      <div className="footer-links">
+    <nav>
+        <p className="copyright">Copyright © Reserved. 2024.</p>
+        <a href="/Rooms" className="link">Rooms</a>
+        <a href="/Roadmap" className="link">Roadmap</a>
+        <a href="/Explore" className="link">Explore</a>
+        <a href="/Team" className="link">Team</a>
+    </nav>
+</div>
     </footer>
   );
 }
 
-
- 
 export default Footer;
 

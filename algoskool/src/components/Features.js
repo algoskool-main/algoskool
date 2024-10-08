@@ -8,8 +8,7 @@ const Features = () => {
     { name: 'AI-Enabled Learning', className: 'feature-item ai-enabled' },
     { name: 'Error Explanation', className: 'feature-item' },
   ]);
-
-  const [scrollLocked, setScrollLocked] = useState(true); // For controlling scroll lock
+  const [isHovering, setIsHovering] = useState(false); // To track hover state
 
   // Function to rotate the feature items
   const rotateFeatures = () => {
@@ -20,36 +19,45 @@ const Features = () => {
   };
 
   useEffect(() => {
-    // Disable scroll until rotation is done
-    const lockScroll = () => {
-      document.body.style.overflow = 'hidden';
-    };
-    const unlockScroll = () => {
-      document.body.style.overflow = 'auto';
-    };
+    let rotationInterval;
 
-    lockScroll(); // Disable scroll initially
+    if (isHovering) {
+      // Start rotation when hovering
+      rotationInterval = setInterval(() => {
+        rotateFeatures(); // Rotate features every 3 seconds
+      }, 3000);
+      console.log("Rotation started");
+    } else {
+      // Stop rotation when not hovering
+      if (rotationInterval) {
+        clearInterval(rotationInterval);
+        console.log("Rotation stopped");
+      }
+    }
 
-    const rotationInterval = setInterval(() => {
-      rotateFeatures(); // Rotate features every 3 seconds
-    }, 3000);
-
-    // Unlock scroll after one full rotation (3 items * 3 seconds = 9 seconds)
-    const rotationTime = features.length * 3000; // 9 seconds for 3 features
-    const scrollUnlockTimeout = setTimeout(() => {
-      unlockScroll();
-      clearInterval(rotationInterval); // Stop rotation after one full loop
-    }, rotationTime);
-
+    // Cleanup interval on unmount or when isHovering changes
     return () => {
-      clearInterval(rotationInterval);
-      clearTimeout(scrollUnlockTimeout);
-      unlockScroll(); // Ensure scroll is re-enabled on component unmount
+      if (rotationInterval) {
+        clearInterval(rotationInterval);
+      }
     };
-  }, [features]);
+  }, [isHovering]);
+
+  // Handlers for mouse enter and leave
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
 
   return (
-    <div className="features">
+    <div 
+      className="features" 
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="background-circle"></div>
       {features.map((feature, index) => (
         <div className={feature.className} key={index}>

@@ -1,17 +1,24 @@
+
 .learn-together-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 50px;
-  background: linear-gradient(135deg, #f5cba7 0%, #fad4d9 40%, #c3d9ff 80%, #5c5cbd 100%);
-  background-size: 200% 200%;
-  animation: backgroundGradient 15s ease infinite;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-size: 400% 400%;
+  width:100%;
+  position:relative;
+  height:100%;
+  
+
 }
 
 
+
+
+
+
+/* 
 @keyframes backgroundGradient {
   0% {
     background-position: 0% 50%;
@@ -22,7 +29,46 @@
   100% {
     background-position: 0% 50%;
   }
+} */
+.color {
+  background: linear-gradient(
+    /* Right-to-left gradient for the top section */
+    to bottom, /* From top to bottom */
+    rgba(143,118,133,0.5),
+    rgba(163,138,147,0.5),
+    rgba(195,181,172,0.5),
+    rgba(230,224,211,0.5),
+    rgba(238,237,227,0.5),
+    rgba(244,245,242,0.5),
+    rgba(245,244,244,0.5),
+    rgba(247,246,247,0.5),
+    rgba(245,244,244,0.5)
+
+
+    ),
+    linear-gradient(
+       to bottom right,
+       rgba(61, 44, 71,0.5),
+       rgba(61, 44, 71, 0.3), 
+       rgba(61, 44, 71, 0.3),    /* Starting color (top) */
+       rgba(29, 86, 122, 0.3), 
+       rgba(29, 86, 122, 0.3),
+       rgba(29, 86, 122, 0.3), /* Second color */
+       rgba(41, 101, 128, 0.5), /* Third color */
+       rgba(157, 175, 153, 0.5),/* Fourth color */
+       rgba(177, 183, 154, 0.5),
+       #ede8e0
+    );
+    
+   
+  height: 1135px; /* Height of the color div */
+  width: 100%;    /* Full width */
+  position: absolute; /* Position it absolutely to fill the container */
+  top: 0; /* Align it to the top of the container */
+  left: 0; /* Align it to the left of the container */
+  z-index: 0;
 }
+
 
 .text-content {
   text-align: center;
@@ -30,6 +76,7 @@
   font-family: 'lexend';
   color: #333;
   position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -105,11 +152,20 @@ p {
   width: 90%;
   max-width: 1000px;
   margin-top: 20px;
+  z-index:1;
+  
 }
 
 img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-
+  box-shadow: 0px 0px 40px rgb(181, 125, 154 ,0.1);
+  cursor: pointer;
+  transition: transform 0.9s ease-in-out, box-shadow 0.9s ease-in-out;
+  }
+  img:hover {
+    transform: translateY(-10px); 
+    box-shadow: 
+      0px 0px 40px rgb(130, 84, 99);
+  }

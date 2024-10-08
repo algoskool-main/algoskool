@@ -4,6 +4,7 @@
     align-items: center;
     padding: 20px;
     background-color: #f5f5f5; /* Adjust the background as needed */
+    justify-content: space-evenly;
   }
   
   .footer-content {
@@ -14,19 +15,35 @@
     max-width: 1200px; /* Adjust the width as per your layout */
   }
   
-  .footer-left .logo a {
-    font-size: 24px;
+  .logo  {
+    font-size: 1.3rem; /* Adjust size as needed */
     font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    background: linear-gradient(to right, #800080, #00bfff);
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: white; /* Text color */
+    background-image: linear-gradient(to right, #4c1e78, #9b4baf); /* Gradient colors */
+    padding: 8px 25px; /* Add padding for box effect */
+    border-radius: 100px; /* Rounded corners for box effect */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); Optional shadow for depth */
+    border: 2px solid transparent; /* Create a border for the box shape */
+    text-align: center; /* Center the text */
+    transition: background 0.3s ease;
+    font-family: 'Lexend';
+    margin-left: 10px;
   }
-  
+  .logo:hover{
+    background: linear-gradient(to right, #9b4baf, #4c1e78);
+  }
+  .made{
+    
+    font-size:1.1rem;
+    color:black;
+  }
+  .heart{
+    color:rgba(255, 0, 0, 0.973);
+  }
   .footer-middle {
-    text-align: center;
+    text-align: center; /* Content centered rahega */
     flex: 1;
+    margin-left: 90px;
   }
   
   .footer-middle p {
@@ -37,32 +54,69 @@
     width: 20px;
     margin-left: 5px;
   }
+  .based-in{
+    color:black;
+    margin-right:198px;
+    font-size:1.1rem;
+    margin-top:30px;
+  }
   
-  .footer-signup .arrow {
-    
-        background-color: #800080; /* Purple background for Sign Up */
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        border-radius: 5px;
+ .arrow {
+    padding: 8px 25px; /* Adjust padding to match the image */
+  font-size: 1.1rem; /* Adjust font size to match */
+  font-weight: bold;
+  color: white; /* Text color */
+  background: linear-gradient(to right, #4c1e78, #9b4baf); /* Darker gradient colors */
+  border: none;
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer;
+  position: relative; /* For positioning the arrow */
+  overflow: hidden; /* Ensure the arrow stays within the button */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: background 0.3s ease;
+  font-family: 'Lexend';
       
   }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
+  .arrow:hover{
+    background: linear-gradient(to right, #9b4baf, #4c1e78);
   }
   
-  .footer-links a {
+  .footer-links {
+    display: flex; /* Flexbox apply */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items vertically */
+
+}
+
+.footer-links nav {
+    display: flex; /* Apply Flexbox to nav for horizontal alignment */
+    align-items: center;
+    color:black;
+}
+
+ .copyright {
+    margin-right: 700px; /* Adjust margin between copyright and links */
+    font-family: 'Lexend';
+    white-space: nowrap;
+    color:black;
+    margin-top:80px;
+    font-size:1.1rem;
+
+}
+
+.footer-links .link {
     margin: 0 10px;
     text-decoration: none;
-    color: #0F6292;
-  }
+    margin-top:80px;
+   
+}
+
   .footer-middle .description {
     text-align: justify; /* Ensures that the text is justified */
     text-align-last: center; /* Ensures the last line is centered */
     margin-right: 20px 20px;
     margin-left: 20px 20px;
+    font-size: 1rem;
   }
   
   
