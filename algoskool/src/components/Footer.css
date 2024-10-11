@@ -5,6 +5,7 @@
     padding: 20px;
     background-color: #f5f5f5; /* Adjust the background as needed */
     justify-content: space-evenly;
+    position:relative;
   }
   
   .footer-content {
@@ -12,45 +13,24 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Adjust the width as per your layout */
+    max-width: 1200px; 
+   
   }
   
-  .logo  {
-    font-size: 1.3rem; /* Adjust size as needed */
-    font-weight: bold;
-    color: white; /* Text color */
-    background-image: linear-gradient(to right, #4c1e78, #9b4baf); /* Gradient colors */
-    padding: 8px 25px; /* Add padding for box effect */
-    border-radius: 100px; /* Rounded corners for box effect */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); Optional shadow for depth */
-    border: 2px solid transparent; /* Create a border for the box shape */
-    text-align: center; /* Center the text */
-    transition: background 0.3s ease;
-    font-family: 'Lexend';
-    margin-left: 10px;
-    margin-bottom:130px;
-  }
-  .logo:hover{
-    background: linear-gradient(to right, #9b4baf, #4c1e78);
-  }
   .made{
     
     font-size:1.1rem;
     color:black;
+    position:absolute;
+    margin-left:500px;
+  
     
   }
   .heart{
     color:rgba(255, 0, 0, 0.973);
   }
-  .footer-middle {
-    text-align: center; /* Content centered rahega */
-    flex: 1;
-    margin-left: 90px;
-  }
+ 
   
-  .footer-middle p {
-    margin: 5px 0;
-  }
   
   .based-in .india-flag {
     width: 20px;
@@ -58,38 +38,10 @@
   }
   .based-in{
     color:black;
-    margin-right:198px;
+    margin-left:555px;
     font-size:1.1rem;
-    margin-top:30px;
+    margin-top:100px;
   }
-  .arrow-container {
-    position: relative; 
-    margin-bottom: 180px;
-    margin-right:130px;
-}
- .arrow {
-    padding: 10px 20px; /* Adjust padding to match the image */
-  font-size: 1rem; /* Adjust font size to match */
-  font-weight: bold;
-  color: white; /* Text color */
-  background: linear-gradient(to right, #4c1e78, #9b4baf); /* Darker gradient colors */
-  border: none;
-  border-radius: 100px; /* Rounded corners */
-  cursor: pointer;
-  overflow: hidden; /* Ensure the arrow stays within the button */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transition: background 0.3s ease;
-  font-family: 'Lexend';
-  display:flex;
-  position:absolute;
-  height: 26px;
-  width:70px;
-  
-  }
-  .arrow:hover{
-    background: linear-gradient(to right, #9b4baf, #4c1e78);
-  }
-  
  
 
  nav {
@@ -119,11 +71,11 @@
   .footer-middle .description {
     text-align: justify; /* Ensures that the text is justified */
     text-align-last: center; /* Ensures the last line is centered */
-    margin-right: 20px 20px;
-    margin-left: 20px 20px;
+    margin-left:300px;
     font-size: 1rem;
     margin-top:30px;
     color:#4c4c6d;
+    position:absolute;
 
   }
   

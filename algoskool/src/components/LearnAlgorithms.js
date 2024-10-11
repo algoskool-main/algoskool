@@ -24,4 +24,5 @@ const LearnAlgorithms = () => {
     </div>
   );
 };
+
 export default LearnAlgorithms;

@@ -6,32 +6,34 @@
     justify-content: space-between; /* Distribute space evenly */
     align-items: flex-start; /* Align items to the start */
     padding: 100px 50%; /* Add some padding */
-    background-color:white; /* Background color for the features section */
+    background-color:transparent;; /* Background color for the features section */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
     background-color: transparent;
   
   }
  
-  .background-circle {
+  /* .background-circle {
     position: absolute;
-    top: 60%; /* Adjust position to center the sphere */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; /* Adjust width for your desired sphere size */
-    height: 300px; /* Adjust height for the semi-sphere effect */
+    transform: translate(-50%,-50%);
+    width:1800px;
+    height:900px;
     background: linear-gradient(
-      to right, /* Left to right gradient */
-      rgba(209, 189, 156, 1),    /* Starting color (left side) */
-      rgba(61, 44, 71, 1),       /* Second color */
-      rgba(29, 86, 122, 1),      /* Third color */
-      rgba(41, 101, 128, 1),     /* Fourth color */
-      rgba(157, 175, 153, 1),    /* Fifth color */
-      rgba(177, 183, 154, 1)     /* Ending color (right side) */
+      to right, 
+  
+      rgba(61, 44, 71, 1),     
+      rgba(29, 86, 122, 1),  
+      rgba(61, 44, 71, 1)
+      
     );
-     border-radius: 300% 300% 0 0;
-    z-index: 1; 
+     border-radius: 600px 600px  0 0;
+     z-index: 1; 
      overflow: hidden;
-}
+     left:50%;
+     top:300px;
+    
+   
+     
+} */
 
     
   
@@ -50,7 +52,6 @@
     transition: all 0.3s ease; /* Smooth transition for hover effect */
     background-color:rgba(240,232,246,0.8); 
     z-index: 2;
-   
     
   }
 

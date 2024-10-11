@@ -56,8 +56,8 @@ const Features = () => {
     <div 
       className="features" 
       onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave}
-    >
+      onMouseLeave={handleMouseLeave}>
+      
       <div className="background-circle"></div>
       {features.map((feature, index) => (
         <div className={feature.className} key={index}>

@@ -1,16 +1,12 @@
 import React from 'react';
 import './Footer.css';
-import india from './india.jpg'
+import india from './india.jpg';
+
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-  
-        <div className="logo">
-          <a href="/">algoskool</a>
-        </div>
-      
-        <div className="footer-middle">
+      <div className="footer-middle">
           <p className="made">
             Made with <span className="heart">❤</span> by UoA
           </p>
@@ -23,11 +19,7 @@ const Footer = () => {
             Based in <img src={india} alt="India flag" className="india-flag"/>
           </div>
         </div>
-        <div className="arrow-container">
-        <a href="/Sign Up" className="arrow">
-          Sign Up
-        </a>
-      </div>
+       
       </div>
 
      
