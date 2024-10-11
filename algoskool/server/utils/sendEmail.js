@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-
+require('dotenv').config();
 const sendEmail = async (to, subject, html) => {
     // Create a transporter
     const transporter = nodemailer.createTransport({
@@ -12,7 +12,7 @@ const sendEmail = async (to, subject, html) => {
 
     // Define email options
     const mailOptions = {
-        from: process.env.EMAIL_USER,
+        from: `"Algoskool Official" <${process.env.EMAIL_USER}>`,
         to,
         subject,
         html,

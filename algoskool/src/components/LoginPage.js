@@ -4,19 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Link, useNavigate } from 'react-router-dom'; 
 import { useUser } from '../context/UserContext';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const LoginPage = () => {
   const [usernameOrEmail, setUsernameOrEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const { setUser } = useUser(); 
+  
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-   
+    setLoading(true);
     try {
       const response = await fetch('http://localhost:5000/api/login', { 
         method: 'POST',
@@ -43,6 +46,7 @@ const LoginPage = () => {
       navigate('/');
     } catch (err) {
       setError('Create an account/Signup First');
+      setLoading(false);
     }
   };
 
@@ -65,19 +69,28 @@ const LoginPage = () => {
         <label className="input-label" htmlFor="password">Password</label>
         <input 
           id="password" 
-          type="password" 
+          type={showPassword ? 'text' : 'password'}
           placeholder="Enter your password" 
           className="login-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required 
         />
+         <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="show-password-btn"
+          >
+             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+          </button>
 
         <div className="forgot-password">
           <Link to="/forgot-password">Forgot password?</Link>
         </div>
 
-        <button type="submit" className="login-btn">LOGIN</button>
+        <button type="submit" className="login-btn" disabled={loading}>
+          {loading ? 'Logging in...' : 'LOGIN'}
+        </button>
       </form>
 
       <div className="social-login">

@@ -4,13 +4,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import './SignUpPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; 
 const SignUpPage = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [error, setError] = useState('');
     const  navigate = useNavigate();
     const [success, setSuccess] = useState('');
     const [loading, setLoading] = useState(false);
@@ -22,7 +24,7 @@ const SignUpPage = () => {
             setError("Passwords don't match!");
 
             return;
-        }
+        } 
         setLoading(true); // Set loading
         try {
             const response = await fetch('http://localhost:5000/api/signup', { // Make sure this is the correct endpoint
@@ -83,31 +85,40 @@ const SignUpPage = () => {
                 />
                   <div className="password-container">
                     <input 
-                        type={showPassword ? 'text' : 'password'} 
+                       type={showPassword ? 'text' : 'password'}
                         placeholder="Password" 
                         className="signup-input" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
                     />
-                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="show-password-btn">
-                        {showPassword ? 'Hide' : 'Show'}
-                    </button>
+                    <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="show-password-btn"
+          >
+            <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+          </button>
                 </div>
                 <div className="password-container">
                     <input 
-                        type={showPassword ? 'text' : 'password'} 
+                        type={showConfirmPassword ? 'text' : 'password'}
                         placeholder="Confirm Password" 
                         className="signup-input" 
                         value={confirmPassword} 
                         onChange={(e) => setConfirmPassword(e.target.value)} 
                         required 
                     />
-                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="show-password-btn">
-                        {showPassword ? 'Hide' : 'Show'}
-                    </button>
+                     <button
+            type="button"
+            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+            className="show-password-btn"
+          >
+            <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+          </button>
                 </div>
-                <button type="submit" className="signup-btn">Sign up</button>
+                <button type="submit" className="signup-btn"  disabled={loading}>
+          {loading ? 'Signing up...' : 'Sign up'}</button>
             </form>
              
             {!success && (
