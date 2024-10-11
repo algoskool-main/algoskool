@@ -11,11 +11,12 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const { setUser } = useUser(); 
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    console.log({ usernameOrEmail, password });
+   
     try {
       const response = await fetch('http://localhost:5000/api/login', { 
         method: 'POST',
@@ -26,9 +27,10 @@ const LoginPage = () => {
         body: JSON.stringify({ usernameOrEmail, password }),
       });
       const data = await response.json();
+      setLoading(false); // Turn off loading
       
       if (!response.ok) {
-        const data = await response.json(); 
+       
         setError(data.message || ' Login Failed Please try again '); 
         return;
       }
@@ -86,7 +88,7 @@ const LoginPage = () => {
               <FontAwesomeIcon icon={faGoogle} />
             </button>
           </a>
-          <a href="http://localhost:5000/auth/github">
+          <a href="http://localhost:5000/api/auth/github">
             <button className="social-btn github-btn">
               <FontAwesomeIcon icon={faGithub} />
             </button>

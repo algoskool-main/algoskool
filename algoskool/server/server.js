@@ -12,7 +12,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // MongoDB
-mongoose.connect('mongodb://localhost:27017/Students')
+mongoose.connect('mongodb://localhost:27017/Students',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -23,27 +26,23 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(session({
-    secret: 'your_secret_key', 
+    secret:  process.env.SESSION_SECRET || 'your_secret_key', 
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: 'mongodb://localhost:27017/Students' }), // Use your MongoDB URL
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24 // Session expires after 1 day
+        maxAge: 1000 * 60 * 60 * 24, 
+        httpOnly: true,
+        secure: false, 
+        sameSite: 'lax',
     }
 
 }));
 
-// Passport configuration इंपोर्ट करें
 require('./config/passport');
-
-// Passport मिडलवेयर सेटअप
 app.use(passport.initialize());
 app.use(passport.session());
-
-// रूट्स
 app.use('/api', authRoutes);
-
-// सर्वर शुरू करें
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

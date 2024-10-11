@@ -15,11 +15,11 @@ const root = ReactDOM.createRoot(rootElement);
 // Render the app
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <BrowserRouter>
+    <BrowserRouter> {/* BrowserRouter should wrap UserProvider */}
+      <UserProvider>
         <App />
-      </BrowserRouter>
-    </UserProvider>
+      </UserProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

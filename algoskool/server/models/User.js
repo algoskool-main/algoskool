@@ -11,6 +11,9 @@ const userSchema = new mongoose.Schema({
         }
     }, 
     googleId: { type: String },
+    githubId: { type: String },
+    resetPasswordToken: { type: String },
+    resetPasswordExpires: { type: Date },
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);

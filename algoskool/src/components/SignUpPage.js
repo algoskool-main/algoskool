@@ -13,15 +13,17 @@ const SignUpPage = () => {
     const [showPassword, setShowPassword] = useState(false);
     const  navigate = useNavigate();
     const [success, setSuccess] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         if (password !== confirmPassword) {
             setError("Passwords don't match!");
+
             return;
         }
-       
+        setLoading(true); // Set loading
         try {
             const response = await fetch('http://localhost:5000/api/signup', { // Make sure this is the correct endpoint
                 method: 'POST',
@@ -31,19 +33,19 @@ const SignUpPage = () => {
                 credentials: 'include',
                 body: JSON.stringify({ username, email, password }),
             });
-
+                  
+            const data = await response.json();
+            setLoading(false); // Turn off loading
+      
             if (!response.ok) {
-                const data = await response.json(); 
-                setError(data.message || 'Signup failed.');
-                return;
-              }
-              
-              setSuccess('Account created successfully');
-              // Optionally clear the form fields
-              setUsername('');
-              setEmail('');
-              setPassword('');
-              setConfirmPassword('');
+              setError(data.message || 'Signup failed.');
+              return;
+            }
+      
+            setSuccess('Account created successfully.');
+            setTimeout(() => {
+              navigate('/login'); // Redirect to login page after success
+            }, 2000);
             
             } catch (err) {
               setError('Signup failed. Please try again.');
@@ -117,7 +119,7 @@ const SignUpPage = () => {
                         <FontAwesomeIcon icon={faGoogle} />
                     </button>
                 </a>
-                <a href="http://localhost:5000/auth/github">
+                <a href="http://localhost:5000/api/auth/github">
                     <button className="social-btn github-btn">
                         <FontAwesomeIcon icon={faGithub} />
                     </button>

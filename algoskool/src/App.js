@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate  } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -11,14 +11,18 @@ import Footer from './components/Footer';
 import LoginPage from './components/LoginPage'; 
 import SignUpPage from './components/SignUpPage';
 import ForgotPasswordPage from './components/ForgotPasswordPage';
+import ResetPasswordPage from './components/ResetPasswordPage'; 
 import { useUser } from './context/UserContext';
 
 function App() {
-  const { setUser} = useUser();
+  const { user,setUser} = useUser();
+  const navigate = useNavigate();
   
+   
   useEffect(() => {
+    // Fetch current user from API on mount
     fetch('http://localhost:5000/api/current_user', {
-        credentials: 'include', // Include credentials to allow the server to access the session
+        credentials: 'include',
     })
     .then(response => response.json())
     .then(data => {
@@ -28,12 +32,16 @@ function App() {
                 email: data.email,
                 initials: data.username.charAt(0).toUpperCase(),
             });
-        }
-    })
+            navigate('/'); // Redirect to landing page
+          }
+          })
     .catch(err => {
         console.error('Error fetching current user:', err);
     });
-}, [setUser]);
+  }, [setUser, navigate]);
+
+
+
   return (
       <div className="App">
         <header>
@@ -53,6 +61,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} /> 
             <Route path="/signup" element={<SignUpPage />} /> 
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
           </Routes>
          
         </main>
