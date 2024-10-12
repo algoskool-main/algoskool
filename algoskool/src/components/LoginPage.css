@@ -1,0 +1,113 @@
+/* Container for the login form */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-container:hover{
+  transform: translateY(-10px); 
+  box-shadow: 
+    0px 0px 40px rgb(130, 84, 99);
+}
+
+/* Title */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input labels */
+.input-label {
+  text-align: left;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input fields */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Gradient login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #9b4baf, #4c1e78);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Social login section */
+.social-login  {
+  font-size: 12px;
+  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color:red;
+}
+.google-btn:hover{
+  background:#db4537fc;
+}
+.github-btn{
+  background-color: #4c1e78;
+}
+.forgot-password:hover{
+  text-decoration: underline;
+}
+
+.signup-link  {
+  font-weight: bold;
+  color:#4c1e78;
+}
+
+
+.signup-link:hover{
+  text-decoration: underline;
+}
+.account-text1 
+{
+    margin-top: 20px;
+    font-size: 14px;
+}

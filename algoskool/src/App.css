@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend', sans-serif; /* Apply 'Lexend' font globally */
+  box-sizing: border-box;
+  background-color: white; /* Light background for the whole page */
+  color: #333;
+  overflow-x: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(143,118,133,0.1),
+    rgba(163,138,147,0.5),
+    rgba(195,181,172,0.5),
+    rgba(230,224,211,0.5),
+    rgba(238,237,227,0.5),
+    rgba(244,245,242,0.5),
+    rgba(245,244,244,0.5),
+    rgba(247,246,247,0.5),
+    rgba(245,244,244,0.5)
+  ),
+  linear-gradient(
+    to bottom right,
+    rgba(61, 44, 71, 0.2),
+    rgba(61, 44, 71, 0.3),
+    rgba(61, 44, 71, 0.3),
+    rgba(29, 86, 122, 0.3),
+    rgba(29, 86, 122, 0.3),
+    rgba(29, 86, 122, 0.3),
+    rgba(41, 101, 128, 0.5),
+    rgba(157, 175, 153, 0.5),
+    rgba(177, 183, 154, 0.5),
+    #ede8e0
+  );
+  min-height: 100vh; /* Ensures it covers the whole page */
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #713e98;
+}

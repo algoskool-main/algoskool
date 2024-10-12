@@ -1,0 +1,71 @@
+
+
+.features {
+    position:relative;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align items to the start */
+    padding: 100px 50%; /* Add some padding */
+    background-color:transparent;; /* Background color for the features section */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    background-color: transparent;
+  
+  }
+ 
+  /* .background-circle {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width:1800px;
+    height:900px;
+    background: linear-gradient(
+      to right, 
+  
+      rgba(61, 44, 71, 1),     
+      rgba(29, 86, 122, 1),  
+      rgba(61, 44, 71, 1)
+      
+    );
+     border-radius: 600px 600px  0 0;
+     z-index: 1; 
+     overflow: hidden;
+     left:50%;
+     top:300px;
+    
+   
+     
+} */
+
+    
+  
+ 
+  
+  .feature-item {
+    text-align: center; /* Center align text */
+    width: 180px; /* Set a fixed width for each item */
+    height: 45px; /* Set a fixed height for each item */
+    margin:0 30px; /* Add some margin between items */
+    font-size: 1.5rem; /* Title font size */
+    color:darkslateblue; 
+    padding: 20px; /* Add padding around each item for better spacing */
+    border:1px solid #4c1e78; /* Optional border for styling */
+    border-radius: 20px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    background-color:rgba(240,232,246,0.8); 
+    z-index: 2;
+    
+  }
+
+  
+  .features:hover .feature-item {
+    animation: rotate 3s linear infinite;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.1) rotate(360deg); /* Scale and rotate on hover */
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid #4c1e78; /* Add a border on hover */
+  }
+  .ai-enabled {
+    transform: translateY(-100px); /* Move the title to the left visually */
+    transition: transform 0.5s ease-in-out;
+  }

@@ -1,0 +1,88 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Adjust the background as needed */
+    justify-content: space-evenly;
+    position:relative;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+   
+  }
+  
+  .made{
+    
+    font-size:1.1rem;
+    color:black;
+    position:absolute;
+    margin-left:500px;
+  
+    
+  }
+  .heart{
+    color:rgba(255, 0, 0, 0.973);
+  }
+ 
+  
+  
+  .based-in .india-flag {
+    width: 20px;
+    margin-left: 5px;
+  }
+  .based-in{
+    color:black;
+    margin-left:555px;
+    font-size:1.1rem;
+    margin-top:100px;
+  }
+ 
+
+ nav {
+    display: flex; /* Apply Flexbox to nav for horizontal alignment */
+    align-items: center;
+    color:black;
+}
+
+ .copyright {
+    margin-right: 700px; /* Adjust margin between copyright and links */
+    font-family: 'Lexend';
+    white-space: nowrap;
+    color:black;
+    margin-top:90px;
+    font-size:1.1rem;
+    margin-bottom:10px;
+
+}
+
+ .link {
+    margin: 0 10px;
+    text-decoration: none;
+    margin-top:80px;
+   
+}
+
+  .footer-middle .description {
+    text-align: justify; /* Ensures that the text is justified */
+    text-align-last: center; /* Ensures the last line is centered */
+    margin-left:300px;
+    font-size: 1rem;
+    margin-top:30px;
+    color:#4c4c6d;
+    position:absolute;
+
+  }
+  
+  
+
+
+
+
+
+
